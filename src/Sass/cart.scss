@@ -1,0 +1,206 @@
+@charset "utf-8";
+//引入hotcss的px2rem函数的文件
+@import '../lib/hotcss-master/px2rem.scss';
+
+//定义设计图的宽度
+$designWidth: 750;
+$page-padding: px2rem(26);
+$dui-img-bg: #ec1a5a;
+$car-settlement-h: px2rem(88);
+
+//购物车头部header Go
+.top-hd{
+    color: #fff;
+    background: linear-gradient(to right, #9e0958, #e6254f);
+    position: relative;
+    h3{
+        text-align: center;
+        font-size: px2rem(30);
+        font-family: '黑体';
+        font-weight: 400;
+        height: px2rem(90);
+        line-height: px2rem(90);
+    }
+    .tp-shopcart-edit{
+        position: absolute;
+        top: px2rem(34);
+        right: px2rem(26);
+        font-size: px2rem(28);
+    }
+}
+
+//购物车列表模块
+.icon_selected{
+    height: px2rem(42);
+    width: px2rem(42);
+    border-radius: 50%;
+    font-size: px2rem(30);
+    color: white;
+    background-color: $dui-img-bg;
+    text-align: center;
+    line-height: px2rem(42);
+    flex: 0 0 px2rem(42);
+}
+.goods-list{
+    margin-bottom: $car-settlement-h;
+    .goods-item-wrap{
+        color: #333;
+        .goods-item-hd{
+            border: 1px solid #ccc;
+            height: px2rem(72);
+            box-sizing: border-box;
+            padding: px2rem(16) $page-padding;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            //弹性盒子头部布局
+            i{
+                height: px2rem(42);
+                width: px2rem(42);
+                border-radius: 50%;
+                font-size: px2rem(30);
+                color: white;
+                background-color: $dui-img-bg;
+                text-align: center;
+                line-height: px2rem(42);
+            }
+            h4{
+                font-family: '黑体';
+                font-weight: 200;
+                font-size: px2rem(28);
+                padding-left: px2rem(15);
+            }           
+        }
+        .goods-item-bd{
+         height: px2rem(214);
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         padding: 0 $page-padding;
+           .goods-item-bd-l{
+            height: px2rem(184);
+               padding-left: px2rem(18);
+               a{
+                   display: block;
+                   img{
+                       vertical-align: top;
+                       width: px2rem(185);
+                       height: px2rem(185);
+                   }
+               }
+           }
+           .goods-item-bd-r{
+               line-height: px2rem(27);
+               height: px2rem(184);
+               margin-left: px2rem(15);
+               .goods-item-name{
+                   font-size: px2rem(22); 
+                   height: px2rem(54);
+               }
+               .godds-item-sku{
+                   font-size: px2rem(22);
+                .sku-name{
+                    color: #666;
+                }
+                .sku-valu{
+                    color: $dui-img-bg;
+                }
+            }
+            .yx-sjicon-wrap{
+             height: px2rem(17);
+             width: px2rem(168);
+             background: url(../img/mobiphone.png) no-repeat;
+             background-size: contain;
+             margin: px2rem(5) px2rem(5) 
+               }
+            .goods-item-price{
+                color: $dui-img-bg;
+                font-size: px2rem(22);
+                line-height: 1.5;
+            }
+            .goods-item-edit-wrap{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                height: px2rem(48);
+                position: relative;
+                top: -5px;
+                   .edit-count-warp{
+                       border: 1px solid #666;
+                       border-radius: px2rem(4);
+                       overflow: hidden;
+                     span{
+                       float: left;
+                       font-size: px2rem(20);
+                       padding: 0 px2rem(12);
+                       height: px2rem(38);
+                       line-height: px2rem(38);
+                       border-left: 1px solid #9c9c9c;
+                       &:first-child{
+                           border-left: none;
+                       }
+                     }
+                   }
+                   .edit-btn{
+                       font-size: px2rem(35);
+                       line-height: px2rem(48);
+                   }
+               }
+           }
+        }
+        .goods-item-sep{
+            background-color: #eee;
+            height: px2rem(20);
+        }
+    }
+}
+
+//底部购物车部分
+.goods-account-wap{
+    padding-left: $page-padding;
+    box-sizing: border-box;
+    height: $car-settlement-h;
+    width: 100%;
+    background-color: #fff;
+    opacity: .8;
+    position: fixed;
+    left: 0;
+    bottom: px2rem(80);
+    z-index: 1000;
+    overflow: hidden;
+    .account-l{
+       float: left;
+       font-size: px2rem(32);
+       line-height: $car-settlement-h;
+       a{
+           display: block;
+       }
+       i{
+           display: inline-block;
+           width: px2rem(40);
+           height: px2rem(40);
+       }
+    }
+    .account-r{
+        float: right;
+        display: flex;
+        font-size:px2rem(24);
+        .account-sum{
+            width:px2rem(238);
+            height: $car-settlement-h;
+            line-height: $car-settlement-h;
+            .price-num{
+                color: #910758;
+            }
+        }
+     .account-settle{
+        width: px2rem(222);
+        height: $car-settlement-h;
+        box-sizing: border-box;
+        line-height: $car-settlement-h;
+        color: #fff;
+        background: linear-gradient(to right,#910758, #f61c5a);
+        text-align: center;   
+       }
+    }
+}

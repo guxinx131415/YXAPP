@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="bookmark" href="./favicon.ico" type="image/x-icon"/>
+    <!-- 设置缓存 -->
+    <!-- 设定网页的到期时间  -->
+    <meta http-equiv="Expires" content="-1">
+    <!-- 清除缓存（再访问这个网站要重新下载！） -->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <!-- 禁止浏览器从本地机的缓存中调阅页面内容，访问者将无法脱机浏览 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!-- author用于定义网页作者 -->
+    <meta name="author" content="aicoder.com">
+    <!-- 就是当点击网页添加至主屏幕功能时，会在主屏幕上生成一个图标。点击该图标会进入webapp功能。就是模拟本地应用的模式来浏览web页面。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）。这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 添加到主屏幕后，app全屏显示 -->
+    <meta content="yes" name="apple-touch-fullscreen" />
+
+    <!-- 默认设备会自动识别任何可能是电话和邮箱的字符串。设置telephone=no可以禁用这项功能。 -->
+    <meta content="telephone=no,email=no" name="format-detection" />
+
+    <!-- UC浏览器私有 -->
+    <!-- 全屏模式 -->
+    <meta name="full-screen" content="yes">
+    <!-- 应用模式 -->
+    <meta name="browsermode" content="application">
+
+    <!-- QQ浏览器私有 -->
+    <!-- 全屏模式 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes" />
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css" >
+    <link rel="stylesheet" href="./font/font_shop/iconfont.css" >
+    <link rel="stylesheet" href="./font/font_ok/iconfont.css" >
+    <link rel="stylesheet" href="./css/common.css" >
+    <link rel="stylesheet" href="./css/index.css" >
+    <script src="./js/rem.js"></script>
+    <title>优选网</title>
+</head>
+<body>
+    <div class="container">
+      <!-- 顶部搜索区域 -->
+     <header class="top-hd">
+         <div class="logo-wrap"></div>
+         <div class="srch-wrap">
+             <input type="text" id="srchTxt" placeholder="搜索优选商品/店铺" class="srch-txt">
+             <i class="icon iconfont icon-magnifier" id="btnSrch"></i>
+         </div>
+         <div class="msg-wrap">
+             <p class="icon iconfont icon-xiaoxi"></p>
+             <span>消息</span>
+         </div>  
+     </header>
+
+     <div class="scroll-view">
+        <!-- banner的轮播图区域 -->
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/swiper1.png" alt="图片"></div>
+                    <div class="swiper-slide"><img src="./img/swiper2.png" alt="图片"></div>
+                    <div class="swiper-slide"><img src="./img/swiper3.png" alt="图片"></div>
+                    <div class="swiper-slide"><img src="./img/swiper4.png" alt="图片"></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+       <!-- 网站导航区域 -->
+     <div class="site-nav-wrap">
+         <div class="layer-sep"></div>
+         <ul class="site-nav">
+             <li class="site-nav-item">
+                 <a href="#">
+                     <i class="icon iconfont icon-weibiaoti2fuzhi05"></i>
+                     <p>母婴品</p>
+                 </a>
+             </li>
+             <li class="site-nav-item">
+                <a href="#">
+                    <i class="icon iconfont icon-fuwuchaoshi cs-bg"></i>
+                    <p>超市购</p>
+                </a>
+            </li>
+            <li class="site-nav-item">
+                <a href="#">
+                    <i class="icon iconfont icon-miaosha ms-bg"></i>
+                    <p>秒杀拍</p>
+                </a>
+            </li>
+            <li class="site-nav-item">
+                <a href="#">
+                    <i class="icon iconfont icon-chongzhi cz-bg"></i>
+                    <p>易充值</p>
+                </a>
+            </li>
+         </ul>
+         <div class="layer-sep"></div>
+       </div>
+       <!-- 网站内容区域 -->
+       <!-- 秒杀 -->
+      <div class="layer ms-layer">
+          <div class="layer-hd">
+              <div class="hd-l">
+                  <div class="hd-title">
+                      <i class="icon iconfont icon-miaosha1"></i>
+                      <span>秒杀</span>
+                  </div>
+                 <!-- 秒杀时钟 -->
+                 <div class="timer-wrap clearfix" id="msTimerBox">
+                     <span class="timer-num">1</span>
+                     <span class="timer-num">2</span>
+                     <span class="timer-sep">:</span>
+                     <span class="timer-num">3</span>
+                     <span class="timer-num">4</span>
+                     <span class="timer-sep">:</span>
+                     <span class="timer-num">5</span>
+                     <span class="timer-num">6</span>
+                 </div>
+              </div>
+              <div class="hd-r">
+                  <a href="#">
+                     <span>更多</span>
+                     <i class="gdd"><img src="./img/icon/更多.png"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="layer-bd">
+            <ul class="layer-bd-list">
+                <li class="bd-list-item">
+                    <a href="#">
+                        <img class="ms-img" src="./img/p1.png" alt="图片p1">
+                    </a>
+                    <div class="item-des">
+                        <img class="ms-price-img" src="./img/sm.png" alt="tup">
+                        <span class="item-price">￥0.01</span>
+                    </div>
+                </li>
+                <li class="bd-list-item">
+                    <a href="#">
+                        <img class="ms-img" src="./img/p2.png" alt="图片p1">
+                    </a>
+                    <div class="item-des">
+                        <img class="ms-price-img" src="./img/sm.png" alt="tup">
+                        <span class="item-price">￥0.01</span>
+                    </div>
+                </li>
+                <li class="bd-list-item">
+                    <a href="#">
+                        <img class="ms-img" src="./img/p3.png" alt="图片p1">
+                    </a>
+                    <div class="item-des">
+                        <img class="ms-price-img" src="./img/sm.png" alt="tup">
+                        <span class="item-price">￥0.01</span>
+                    </div>
+                </li>
+            </ul>
+          </div>
+      </div>
+        <div class="layer-sep"></div>
+
+      <!-- 女装区 -->
+      <div class="layer nz-layer">
+            <div class="layer-hd">
+                <div class="hd-l">
+                    <div class="hd-title">
+                        <i class="icon iconfont icon-nvzhuang"></i>
+                        <span>女装</span>
+                    </div>
+                </div>
+                <div class="hd-r">
+                    <a href="#">
+                        <span>更多</span>
+                        <i class="gdd"><img src="./img/icon/更多.png"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="layer-bd">
+                <ul class="layer-bd-list">
+                    <li class="bd-list-item nz-bd-l">
+                        <a href="#">
+                            <img class="ms-img" src="./img/女装/1.png" alt="">
+                        </a>
+                    </li>
+                    <li class="bd-list-item nz-bd-r">
+                    <div class="bd-r-top bd-r-item">
+                        <a href="#"><div class="nz-wz"><p>全场5折起</p></div><img class="bd-r-item-1" src="./img/女装/2.png"></a>
+                        <a href="#"><div class="nz-wz"><p>全场6折起</p></div><img class="bd-r-item-1" src="./img/女装/4.png"></a>
+                        <a href="#"><div class="nz-wz"><p>全场9折起</p></div><img class="bd-r-item-1" src="./img/女装/6.png"></a>
+                    </div>
+                    <div class="bd-r-bottom bd-r-item">
+                        <a href="#"><div class="nz-wz"><p>全场5折起</p></div><img class="bd-r-item-1" src="./img/女装/3.png"></a>
+                        <a href="#"><div class="nz-wz"><p>全场6折起</p></div><img class="bd-r-item-1" src="./img/女装/5.png"></a>
+                        <a href="#"><div class="nz-wz"><p>全场9折起</p></div><img class="bd-r-item-1" src="./img/女装/7.png"></a>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      <div class="layer-sep"></div>
+
+         <!-- 运动区 -->
+      <div class="layer yd-layer">
+        <div class="layer-hd">
+            <div class="hd-l">
+                <div class="hd-title">
+                    <i class="icon iconfont icon-yundong"></i>
+                    <span>运动</span>
+                </div>
+            </div>
+            <div class="hd-r">
+                <a href="#">
+                   <span>更多</span>
+                   <i class="gdd"><img src="./img/icon/更多.png"></i>
+                </a>
+            </div>
+        </div>
+        <div class="layer-bd">
+          <ul class="layer-bd-list">
+              <li class="bd-list-item yd-bd-l">
+                  <a href="#">
+                      <img class="ms-img" src="./img/yd-l.png" alt="">
+                  </a>
+              </li>
+              <li class="bd-list-item yd-bd-r">
+                <div class="bd-r-top bd-r-item">
+                    <a href="#"><img class="bd-r-item-1" src="./img/yd-r-2.png"></a>
+                    <a href="#"><img class="bd-r-item-2" src="./img/yd-r-1.png"></a>
+                </div>
+                <div class="bd-r-bottom bd-r-item">
+                    <a href="#"><img class="bd-r-item-2" src="./img/yd-r-1.png"></a>
+                    <a href="#"><img class="bd-r-item-1" src="./img/yd-r-2.png"></a>
+                </div>
+              </li>
+          </ul>
+        </div>
+    </div>
+      <div class="layer-sep"></div>
+
+      <!-- 箱包配饰区 -->
+      <div class="layer yd-layer xb-layer">
+            <div class="layer-hd">
+                <div class="hd-l">
+                    <div class="hd-title">
+                        <i class="icon iconfont icon-iconset0330"></i>
+                        <span>箱包配饰</span>
+                    </div>
+                </div>
+                <div class="hd-r">
+                    <a href="#">
+                       <span>更多</span>
+                       <i class="gdd"><img src="./img/icon/更多.png"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="layer-bd">
+              <ul class="layer-bd-list">
+                  <li class="bd-list-item yd-bd-l">
+                      <a href="#">
+                          <img class="ms-img" src="./img/箱包/x1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li class="bd-list-item yd-bd-r">
+                    <div class="bd-r-top bd-r-item">
+                        <a href="#"><img class="bd-r-item-1" src="./img/箱包/x1.png"></a>
+                        <a href="#"><img class="bd-r-item-2" src="./img/箱包/x2.jpg"></a>
+                    </div>
+                    <div class="bd-r-bottom bd-r-item">
+                        <a href="#"><img class="bd-r-item-2" src="./img/箱包/x4.png"></a>
+                        <a href="#"><img class="bd-r-item-1" src="./img/箱包/x3.png"></a>
+                    </div>
+                  </li>
+              </ul>
+            </div>
+        </div>
+      <div class="layer-sep"></div>
+
+      <!-- 底部部分 -->
+      <footer class="site-footer">
+          <ul class="footer-list">
+              <li class="footer-list-item cur">
+                  <a href="#">
+                      <i class="icon iconfont icon-shouye"></i>
+                      <span class="f-sy">首页</span>
+                  </a>
+              </li>
+              <li class="footer-list-item cur">
+                    <a href="src.html">
+                        <i class="icon iconfont icon-magnifier"></i>
+                        <span class="f-sy">搜索</span>
+                    </a>
+                </li>
+            <li class="footer-list-item cur">
+                    <a href="#">
+                        <i><img src="./img/icon/分类.png"></i>
+                        <span>分类</span>
+                    </a>
+                </li>
+            <li class="footer-list-item cur">
+                    <a href="cart.html">
+                        <i><img src="./img/icon/购物车.png"></i>
+                        <span>购物车</span>
+                    </a>
+                </li>
+            <li class="footer-list-item cur">
+                    <a href="#">
+                        <i><img src="./img/icon/我的.png"></i>
+                        <span>我的</span>
+                    </a>
+                </li>
+          </ul>
+      </footer>
+     </div>
+    </div>
+<script src="./js/indexData.js"></script>
+<script src="./js/common.js"></script>
+<script src="./lib/zepto.min.js"></script>
+<script src="./lib/swiper/js/swiper.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

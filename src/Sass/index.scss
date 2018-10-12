@@ -1,0 +1,477 @@
+@import 'base';
+// Go 头部导航
+.top-hd{
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  padding: 0 11px;
+  background: linear-gradient(to right, #910757, #f71c5a); 
+  height: 38px;
+  // 左侧logo区域
+  .logo-wrap{
+     height: 22px;
+     width: 22px;
+     margin-top: 8px;
+     background: url(../img/logo.png)no-repeat;
+     background-size: contain;
+  }
+
+  //中间搜索区域
+  .srch-wrap{
+      flex: 1; //自定缩放
+      padding: 6px 5px;
+      margin-right: 20px;
+      position: relative;
+      left: 4px;
+      .srch-txt{
+          position: absolute;
+          width: 100%;
+          height: 25px;
+          box-sizing: border-box;
+          border:none;
+          line-height: 24px;
+          font-size: 12px;
+          border-radius: 12px;
+          background-color: #930f3e;
+          padding-left: 1em;
+          color: white;
+      }
+      input:-ms-input-placeholder{
+          color: #b38998;
+      }
+      input::-webkit-input-placeholder{
+          color: #b38998;
+      }
+      i{
+        position: absolute;
+        right: 1em;
+        top: 10px;
+        color: #fff;
+      }
+  }
+  //右边信息
+  .msg-wrap{
+      width: 24px;
+      height: 33px;
+      position: relative;
+      p {
+        height: 24px;
+        font-size: 20px;
+        line-height: 24px;
+        color: white;
+        text-align: center;
+    }
+    span {
+        font-size: 11px;
+        line-height: 12px;
+        position: absolute;
+        top: 23px;
+        left: 0;
+        color: #fff;
+    }
+  }
+}
+// end 头部导航
+
+//轮播区域 Go
+.scroll-view{
+    min-width: 320px;
+    max-width: 649px;
+    margin: 38px auto 42px;
+}
+.swiper-container{
+    position: relative;
+    &::before{
+      @include boder1px(#beae8d);
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            img{
+                width: 6.4rem;
+                height: 2.4rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background-color: white;
+    }
+}
+
+//网站导航区域 Go
+.site-nav-wrap{
+   .site-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 56px;
+        .site-nav-item{
+         flex: 0 0 36px;
+         font-size: 12px;
+         height: 47px;
+         a{
+             display: block;
+             i{
+                 width: 30px;
+                 height: 30px;
+                 display: block;
+                 margin: 0 auto;
+                 border-radius: 16px;
+                 background-color: #7f47dd;
+                 font-size: 15px;
+                 color: white;
+                 text-align: center;
+                 line-height: 30px;
+             }
+             p{
+                 font-size: 12px;
+                 color: #494949;
+             }
+         }
+    }
+  }
+  .cs-bg{
+    background-color: #fb3057!important;
+}
+   .ms-bg{
+    background-color: #d3c715!important;
+    }
+    .cz-bg{
+    background-color: #ff8920!important;
+    }
+}
+$layer-padding: 0.22rem;
+$layer-main-color:#ff8a2f;
+$layer-nv-color: #f71c5a;
+//网站内容层 Go
+.layer{ 
+    background-color: #fff;
+    .layer-hd{
+        height: 0.56rem;
+        position: relative;
+        padding: 0 $layer-padding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $layer-main-color;
+        &::before{
+            position: absolute;
+            left: $layer-padding;
+            top: 0;
+            content: '';
+            width: 0.12rem;
+            height: 100%;
+            background-color: $layer-main-color;
+        }
+        &::after{
+            @include boder1px($bd-color,0,0,1,0);
+        }
+        .hd-l{
+           display: flex;
+           justify-content: flex-start;
+           padding-left: 0.26rem;
+           font-family: '黑体';
+           font-size: 0.3rem;
+           .hd-title{
+               i.icon{
+                   font-size: 0.3rem;
+               }
+           }
+           .timer-wrap{
+            font-size: 0.24rem;
+            color: #121212;
+            word-spacing: 0.04rem;
+            span{
+                float: left;
+                margin-left: 0.05rem;
+            }
+               .timer-num{
+                   line-height: 0.3rem;
+                   height: 0.3rem;
+                   width: 0.22rem;
+                   background-color: #121212;
+                   display: inline-block;
+                   font-weight: normal;
+                   color: white;
+                   text-align: center;
+               }
+           }
+        }
+        .hd-r{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.03rem;
+            span{
+                position: relative;
+                top: -3px;
+                left: -2px;
+            }
+            i.gdd img{
+                display: inline-block;
+                height: 0.3rem;
+                width: 0.3rem;
+                background-color:$layer-main-color;
+                border-radius: 0.04rem;
+                &::before{
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .layer-bd{
+        box-sizing: border-box;
+        height: 2.52rem;
+        padding: 0.14rem $layer-padding;
+        .layer-bd-list{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+//秒杀列
+.ms-layer{
+    .layer-bd{
+        height: 2.26rem;
+        .layer-bd-list{
+            .bd-list-item{
+                a{
+                    display: block;
+                    position: relative;
+                    &::before{
+                        @include boder1px($border-color,1,1,1,1);
+                    }
+                    img.ms-img{
+                        width: 1.78rem;
+                        height: 1.78rem;
+                        vertical-align: middle;
+                    }
+                }
+                .item-des{
+                    height: 0.23rem;
+                    width: 1.78rem;
+                    font-size:0.20rem;
+                    color:#ec1a5a;
+                    text-align: center;
+                    position: relative;
+                    .ms-price-img{
+                     position: absolute;
+                     left: 0;
+                     top: 0.11rem;
+                     height: 0.16rem;
+                     width: 1.78rem;
+                     z-index: 10;
+                    }
+                .item-price{
+                    position: absolute;
+                    left: 0.5rem;
+                    top: 0;
+                    z-index: 11;
+                   }    
+                }
+            }
+        }
+    }
+}
+
+//运动区 Go
+.yd-layer{
+    .layer-bd{
+        .layer-bd-list{
+            .yd-bd-l{
+                a{
+                    display: block;
+                    position: relative;
+                    &::before{
+                        @include boder1px($border-color,1,1,1,1);
+                    }
+                    img{
+                        width: 1.78rem;
+                        height: 2.28rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .yd-bd-r{
+                height: 2.28rem;
+                width: 3.98rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                .bd-r-item{
+                    display: flex;
+                    justify-content: space-around;
+                    a{
+                        position: relative;
+                        display: block;
+                        &::before{
+                            @include boder1px($border-color,1,1,1,1);
+                        }
+                        .bd-r-item-1{
+                        width: 1.2rem;
+                        height: 1.03rem;
+                        }
+                        .bd-r-item-2{
+                         width:2.42rem;
+                         height: 1.03rem;
+                         vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//女装区 Go
+.nz-layer{
+    .layer-hd{
+      color:$layer-nv-color;
+      .hd-title i{
+          position: relative;
+          top:-2px;
+      }
+    &::before{
+      background-color: $layer-nv-color;
+        }
+        .hd-r {
+            i.gdd img{
+                background-color: $layer-nv-color;
+            }
+        }
+    }
+    .layer-bd{
+        .layer-bd-list{
+            .nz-bd-l{
+                a{
+                    display: block;
+                    position: relative;
+                    &::before{
+                        @include boder1px($border-color,0,1,1,1);
+                    }
+                    img{
+                        width: 1.78rem;
+                        height: 2.28rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .nz-bd-r{
+                height: 2.28rem;
+                width: 3.98rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                .bd-r-item{
+                    display: flex;
+                    justify-content: space-around;
+                    a{
+                        position: relative;
+                        display: block;
+                        &::before{
+                            @include boder1px($border-color,1,1,1,1);
+                        }
+                        .bd-r-item-1{
+                        width: 1.2rem;
+                        height: 1.03rem;
+                        }
+                        .bd-r-item-2{
+                         width:2.42rem;
+                         height: 1.03rem;
+                         vertical-align: middle;
+                        }
+                        .nz-wz{
+                            position: absolute;
+                            bottom: 0;
+                            height: 45%;
+                            width: 100%;
+                            background-color: rgba($color: #fff, $alpha: 0.6);
+                            p{
+                                font-size: 12px;
+                                text-align: center;
+                                font-weight: 700;
+                                color: $layer-nv-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//箱包区域 
+.xb-layer{
+    .layer-hd{
+        color: #bf0ff9;
+        .hd-title i{
+            position: relative;
+            top:-2px;
+        }
+    &::before{
+        background-color: #bf0ff9;
+        }
+        .hd-r {
+            i.gdd img{
+                background-color: #bf0ff9;
+            }
+        }
+    }
+}
+//底部部分
+.site-footer{
+    position: fixed;
+    height: 42px;
+    background-color: #171717;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    color: #9b9b9b;
+    .footer-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .footer-list-item{
+           width: 36px;
+           height: 35px;
+           &:nth-child(4){
+               img{
+                   left: 4px;
+               }
+           }
+           i{
+               font-size: 19px;
+               line-height: 13px;
+               position: relative;
+               top: -13px;
+               img{
+                   position: relative;
+                   top: -2px;
+                   width: 20px;
+                   height: 19px;
+                   vertical-align: middle;
+               }
+           }
+           .f-sy{
+            font-size: 12px;
+            position: relative;
+            top: -16px;
+            left: -2px;
+            display: inline;
+           }
+           span{
+               display: block;
+               font-size: 12px;
+               position: relative;
+               top: -15px;
+               left: -2px;
+           }
+        }
+    }
+}

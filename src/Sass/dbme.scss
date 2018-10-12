@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import './_base';
+@import './cart.scss';
+//底部部分
+.site-footer{
+    position: fixed;
+    height: px2rem(84);
+    background-color: #171717;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    color: #9b9b9b;
+    .footer-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .footer-list-item{
+           width:  px2rem(66);
+           height: px2rem(70);
+           &:nth-child(4){
+               img{
+                   left: 4px;
+               }
+           }
+           i{
+               font-size: px2rem(40);   //px2rem()
+               line-height: px2rem(26);
+               position: relative;
+               top: px2rem(11);
+               img{
+                   position: relative;
+                   top: -5px;
+                   width: px2rem(40);
+                   height: px2rem(40);
+                   vertical-align: middle;
+               }
+           }
+           .f-sy{
+            font-size: px2rem(21);
+            position: relative;
+            top: px2rem(24);
+            left: 1px;
+            display: inline;
+           }
+           span{
+               display: block;
+               font-size: px2rem(21);
+               position: relative;
+               top: 15px;
+               left: -3px;
+           }
+        }
+    }
+}
